@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>
+    Antic
+  </title>
+
+<link href="favicons/img-logo.png" rel="icon" type="image/png">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+<link href="css/css-nucleo.css" rel="stylesheet">
+<link href="css/css-all.min.css" rel="stylesheet">
+
+<link href="css/dashboard-argon-dashboard.css" rel="stylesheet">
+
+<link href="css/dashboard-auth.css" rel="stylesheet">
+<script src="js/recaptcha-api.js" async defer></script>
+<link rel="stylesheet" href="css/utils-auth-loader.css">
+</head>
+<body class="bg-dark">
+<div class="main-content">
+
+<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
+<div class="container px-4">
+<a class="navbar-brand" href="antic.html">
+<img src="images/antic-antic.png" style="width: 48px; height: 48px;">
+</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="outline: none">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbar-collapse-main">
+<div class="navbar-collapse-header d-md-none">
+<div class="row">
+<div class="col-6 collapse-brand">
+<a href="antic.html">
+<img src="images/antic-antic.png" style="width: 48px; height: 48px;">
+</a>
+</div>
+<div class="col-6 collapse-close">
+<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav" style="outline: none">
+<span class="bg-light"></span>
+<span class="bg-light"></span>
+</button>
+</div>
+</div>
+</div>
+<ul class="navbar-nav ml-auto">
+<li class="nav-item">
+<a class="nav-link nav-link-icon text-center" href="login.html">
+<i class="ni ni-single-02 text-light"></i>
+<span class="nav-link-inner--text text-light">Sign in</span>
+</a>
+</li>
+<li class="nav-item">
+<a class="nav-link nav-link-icon text-center" href="register.html">
+<i class="ni ni-single-copy-04 text-light"></i>
+<span class="nav-link-inner--text text-light">Sign up</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="header bg-gradient-theme py-7 py-lg-8">
+<div class="container">
+<div class="header-body text-center mb-7">
+<div class="row justify-content-center">
+<div class="col-lg-5 col-md-6">
+
+<h1 class="text-white">antic.run</h1>
+<p class="text-lead text-light" id="auth-header-text">Create an Antic account
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="separator separator-bottom separator-skew zindex-100">
+<svg x="0" y="0" viewbox="0 0 2560 100" preserveaspectratio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+<polygon class="fill-default" points="2560 0 2560 100 0 100" style="fill: #212529"></polygon>
+</svg>
+</div>
+</div>
+<div class="container mt--8 pb-5">
+<div class="row justify-content-center">
+<div class="col-lg-6 col-md-8">
+<div class="card bg-dark shadow border-0">
+<div class="card-body px-lg-5 py-lg-5">
+<form role="form" id="submit-form" method="POST" action="https://antic.run/register">
+<input type="hidden" name="_token" value="w7dI43IbijG4eGh0FqoQiGIew3cM8Daie6Bghy8g"> <div class="form-group">
+<div class="input-group shadow-min input-group-alternative mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text bg-dark"><i class="ni ni-hat-3"></i></span>
+</div>
+<input class="form-control bg-dark pl-2" name="username" placeholder="Username" type="text" value="">
+</div>
+</div>
+<div class="form-group">
+<div class="input-group shadow-min input-group-alternative mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text bg-dark"><i class="ni ni-email-83"></i></span>
+</div>
+<input class="form-control bg-dark pl-2" name="email" placeholder="Email" type="email" value="">
+</div>
+</div>
+<div class="form-group">
+<div class="input-group shadow-min input-group-alternative">
+<div class="input-group-prepend">
+<span class="input-group-text bg-dark"><i class="ni ni-lock-circle-open"></i></span>
+</div>
+<input class="form-control bg-dark pl-2" name="password" placeholder="Password" type="password">
+</div>
+</div>
+<div class="form-group">
+<div class="input-group shadow-min input-group-alternative">
+<div class="input-group-prepend">
+<span class="input-group-text bg-dark"><i class="ni ni-lock-circle-open"></i></span>
+</div>
+<input class="form-control bg-dark pl-2" name="password_confirmation" placeholder="Password confirmation" type="password">
+</div>
+</div>
+<div class="form-group mb-3">
+<div class="input-group shadow-min input-group-alternative">
+<div class="input-group-prepend">
+<span class="input-group-text bg-dark"><i class="fas fa-user-lock"></i></span>
+</div>
+<input class="form-control bg-dark pl-2" name="referrer" placeholder="Referrer (optional)" type="text" value="">
+</div>
+</div>
+<div class="w-100 d-flex justify-content-center">
+<div class="g-recaptcha" data-theme="dark" data-sitekey="6Ldz6tUZAAAAAGC1TGWG84Hmt5bgtxaySmILISyo"></div>
+</div>
+<div class="row mt-2 mb-0">
+<div class="col-12">
+<div class="custom-control custom-control-alternative custom-checkbox">
+<input class="custom-control-input" name="terms" id="terms" type="checkbox" value="on">
+<label class="custom-control-label terms-span" for="terms">
+<span class="text-muted">I agree with the <a href="https://antic.run/legals#tos" target="_blank"></a>Terms of Service and the <a href="https://antic.run/legals#privacy" target="_blank">Privacy Policy</a></span>
+</label>
+</div>
+</div>
+</div>
+<div class="text-center">
+<button type="submit" id="auth-submit" class="btn btn-antic text-light mt-4 w-100">
+<div class="submit-content"><i class="fas fa-user mr-1"></i> Create an account</div>
+<div class="auth-loader d-none">Loading...</div>
+</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<footer class="footer bg-dark">
+<div class="align-items-center justify-content-center d-flex">
+<div class="copyright text-center text-xl-left text-muted">
+&copy; 2020-2022 Antic, all rights reserved
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+<script src="js/dist-jquery.min.js"></script>
+<script src="js/js-bootstrap.bundle.min.js"></script>
+<script src="js/dashboard-argon-dashboard.min.js"></script>
+<script async src="https://js.stripe.com/v3/"></script>
+<script src="js/auth-submit.js"></script>
+<script type="text/javascript">
+  $('#reload').click(function () {
+      $.ajax({
+          type: 'GET',
+          url: 'reload-captcha',
+          success: function (data) {
+              $(".captcha span").html(data.captcha);
+          }
+      });
+  });
+
+</script>
+</body>
+</html>
